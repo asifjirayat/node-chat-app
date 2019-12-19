@@ -9,6 +9,7 @@
 
 ul, li {
   list-style-position: inside;
+  list-style-type: none;
 }
 
 h3 {
@@ -84,7 +85,7 @@ button:disabled {
 }
 
 .chat__sidebar {
-  overflow-y: scroll;
+  overflow-y: auto;
   width: 260px;
   height: 100vh;
   background: -moz-linear-gradient(125deg, rgba(39,107,130,1) 0%, rgba(49,84,129,1) 100%); /* ff3.6+ */
@@ -118,6 +119,7 @@ button:disabled {
   flex-direction: column;
   height: 100vh;
   width: 100%;
+  overflow: scroll;
 }
 
 .chat__messages {
@@ -129,6 +131,8 @@ button:disabled {
 .chat__footer {
   background: #e6eaee;
   display: flex;
+  position: sticky;
+  bottom: 0;
   padding: 10px;
   /*height: 60px;*/
   margin: auto 0 0;
